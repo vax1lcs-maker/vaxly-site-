@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaxly - Afiliados</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #007BFF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #0056b3;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    nav button:hover {
+      background: #004080;
+    }
+    section {
+      display: none;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      color: #007BFF;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Vaxly - Programa de Afiliados</h1>
+  <p>Nosso objetivo: ser afiliados de confiança da Awin!</p>
+</header>
+
+<nav>
+  <button onclick="showTab('moda')">Moda</button>
+  <button onclick="showTab('tecnologia')">Tecnologia</button>
+  <button onclick="showTab('sobre')">Sobre a Vaxly</button>
+</nav>
+
+<section id="moda">
+  <h2>Moda</h2>
+  <p>Na aba de Moda, destacamos produtos de vestuário, acessórios e calçados que selecionamos cuidadosamente para nosso público.</p>
+  <ul>
+    <li>Exemplo Produto 1 - <a href="#">Link de Afiliado</a></li>
+    <li>Exemplo Produto 2 - <a href="#">Link de Afiliado</a></li>
+    <li>Exemplo Produto 3 - <a href="#">Link de Afiliado</a></li>
+  </ul>
+</section>
+
+<section id="tecnologia">
+  <h2>Tecnologia</h2>
+  <p>Na aba de Tecnologia, mostramos gadgets, eletrônicos e softwares com links de afiliados da Awin.</p>
+  <ul>
+    <li>Exemplo Produto 1 - <a href="#">Link de Afiliado</a></li>
+    <li>Exemplo Produto 2 - <a href="#">Link de Afiliado</a></li>
+    <li>Exemplo Produto 3 - <a href="#">Link de Afiliado</a></li>
+  </ul>
+</section>
+
+<section id="sobre">
+  <h2>Sobre a Vaxly</h2>
+  <p>A Vaxly é dedicada a oferecer conteúdo de qualidade e produtos selecionados. Nosso objetivo é construir confiança com nossos leitores e parceiros, garantindo que cada indicação seja relevante e de alta qualidade. Acreditamos que, com transparência e dedicação, seremos excelentes afiliados da Awin.</p>
+</section>
+
+<script>
+  function showTab(tabId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => section.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+  }
+
+  // Mostrar a primeira aba por padrão
+  showTab('moda');
+</script>
+
+</body>
+</html>
